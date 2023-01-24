@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main,
+.inputWrapper,
+.inputField,
+.taskListWrapper,
+.taskListItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  background-color: rgb(227, 227, 227);
+}
+.inputWrapper {
+  height: 80px;
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+.inputField {
+  height: 80%;
+  width: 92%;
+  padding: 0 10px;
+  background-color: rgb(241, 241, 241);
+}
+.taskInput {
+  height: 50%;
+  width: 85%;
+  background-color: transparent;
+  border: solid 1px black;
+}
+.AddTaskButton {
+  height: 80%;
+  width: 15%;
+  background-color: #e95678;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.taskListWrapper {
+  flex-direction: column;
+  height: fit-content;
+  width: 80%;
+  max-width: 500px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+}
+.taskListItem {
+  width: 90%;
+  border-bottom: solid 1px rgb(193, 193, 193);
+}
+.listCheckbox {
+  margin: 20px 5px;
+}
+.deleteButton {
+  height: 50px;
+  width: 150px;
+  margin: 30px;
+  background-color: #24b0bc;
+  border-radius: 8px;
+  color: white;
+  border: none;
+}
