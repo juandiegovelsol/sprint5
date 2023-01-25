@@ -33,13 +33,15 @@ main {
 }
 .taskInput {
   height: 50%;
-  width: 85%;
+  width: 82%;
+  margin: 0 1%;
   background-color: transparent;
   border: solid 1px black;
 }
 .AddTaskButton {
   height: 80%;
-  width: 15%;
+  width: 13%;
+  margin: 0 1%;
   background-color: #e95678;
   color: white;
   border: none;
@@ -58,8 +60,39 @@ main {
   width: 90%;
   border-bottom: solid 1px rgb(193, 193, 193);
 }
-.listCheckbox {
+input[type="checkbox"] {
+  opacity: 0;
   margin: 20px 5px;
+}
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  color: #00646e;
+  line-height: 25px;
+}
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  outline: 2px solid #44d7e4;
+  background: white;
+}
+input[type="checkbox"]:checked + label::before {
+  content: "";
+  text-decoration: line-through;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  outline: none;
+  background-image: url(../resourses/images/checkimage.jpg);
+  background-size: contain;
 }
 .deleteButton {
   height: 50px;

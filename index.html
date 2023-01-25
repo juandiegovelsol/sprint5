@@ -15,17 +15,19 @@
           <button class="AddTaskButton">Add</button>
         </article>
       </section>
-      <section class="taskListWrapper">
-        <article class="taskListItem">
-          <input type="checkbox" class="listCheckbox" />
-          <label for="listCheckbox">Task 1</label>
-        </article>
-        <article class="taskListItem">
-          <input type="checkbox" class="listCheckbox" />
-          <label for="listCheckbox">Task 1</label>
-        </article>
-        <button class="deleteButton">Delete all done</button>
-      </section>
+      <div class="taskListWrapper">
+        <form>
+          <p class="taskListItem">
+            <input type="checkbox" id="task1" name="task" />
+            <label for="task1">Task 1</label>
+          </p>
+          <p class="taskListItem">
+            <input type="checkbox" id="task2" name="task" />
+            <label for="task2">Task 2</label>
+          </p>
+          <button class="deleteButton">Delete all done</button>
+        </form>
+      </div>
     </main>
   </body>
 </html>
