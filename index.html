@@ -11,23 +11,22 @@
     <main>
       <section class="inputWrapper">
         <article class="inputField">
-          <input type="text" class="taskInput" />
+          <form class="inputForm">
+            <input type="text" class="taskInput" />
+          </form>
           <button class="AddTaskButton">Add</button>
         </article>
       </section>
-      <div class="taskListWrapper">
-        <form>
+      <section class="taskListWrapper">
+        <form class="taskListForm">
           <p class="taskListItem">
-            <input type="checkbox" id="task1" name="task" />
-            <label for="task1">Task 1</label>
+            <input type="checkbox" class="taskItem" name="task" />
+            <label class="taskItemLabel">Task 1</label>
           </p>
-          <p class="taskListItem">
-            <input type="checkbox" id="task2" name="task" />
-            <label for="task2">Task 2</label>
-          </p>
-          <button class="deleteButton">Delete all done</button>
         </form>
-      </div>
+        <button class="deleteButton">Delete all done</button>
+      </section>
     </main>
   </body>
+  <script src="JS/app.js"></script>
 </html>

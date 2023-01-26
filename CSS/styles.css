@@ -6,8 +6,9 @@
 main,
 .inputWrapper,
 .inputField,
+.inputForm,
 .taskListWrapper,
-.taskListItem {
+.taskListForm {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,16 +32,21 @@ main {
   padding: 0 10px;
   background-color: rgb(241, 241, 241);
 }
-.taskInput {
-  height: 50%;
+.inputForm {
+  height: 80%;
   width: 82%;
+}
+.taskInput {
+  height: 100%;
+  width: 100%;
   margin: 0 1%;
   background-color: transparent;
   border: solid 1px black;
 }
 .AddTaskButton {
   height: 80%;
-  width: 13%;
+  width: 12%;
+  min-width: 50px;
   margin: 0 1%;
   background-color: #e95678;
   color: white;
@@ -56,11 +62,19 @@ main {
   padding: 20px;
   background-color: white;
 }
+.taskListForm {
+  flex-direction: column;
+  width: 100%;
+}
 .taskListItem {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 50px;
   width: 90%;
   border-bottom: solid 1px rgb(193, 193, 193);
 }
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   opacity: 0;
   margin: 20px 5px;
 }
@@ -93,7 +107,7 @@ input[type="checkbox"]:checked + label::before {
   outline: none;
   background-image: url(../resourses/images/checkimage.jpg);
   background-size: contain;
-}
+} */
 .deleteButton {
   height: 50px;
   width: 150px;
