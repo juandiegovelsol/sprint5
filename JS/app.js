@@ -1,4 +1,5 @@
-const addButton = document.querySelector(".AddTaskButton");
+const addButton = document.querySelector(".addTaskButton");
+const deleteButton = document.querySelector(".deleteButton");
 
 addButton.addEventListener("click", () => {
   const newText = document.querySelector(".taskInput");
@@ -22,4 +23,16 @@ addButton.addEventListener("click", () => {
     list.appendChild(newTaskP);
   }
   newText.value = "";
+});
+
+deleteButton.addEventListener("click", () => {
+  const inputToRemove = document.querySelectorAll(
+    'input[type="checkbox"]:checked'
+  );
+
+  inputToRemove.forEach((element) => {
+    const pToRemove = element.closest("p");
+    const list = document.querySelector(".taskListForm");
+    list.removeChild(pToRemove);
+  });
 });

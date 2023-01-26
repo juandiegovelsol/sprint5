@@ -43,7 +43,7 @@ main {
   background-color: transparent;
   border: solid 1px black;
 }
-.AddTaskButton {
+.addTaskButton {
   height: 80%;
   width: 12%;
   min-width: 50px;
