@@ -1,10 +1,17 @@
 const addButton = document.querySelector(".addTaskButton");
 const deleteButton = document.querySelector(".deleteButton");
 
+const firstToUpperCase = (str) => {
+  const response = str.charAt(0).toUpperCase() + str.slice(1);
+  return response;
+};
+
 addButton.addEventListener("click", () => {
   const newText = document.querySelector(".taskInput");
 
   if (newText.value) {
+    const onlyText = firstToUpperCase(newText.value);
+
     const newTaskP = document.createElement("p");
     newTaskP.classList.add("taskListItem");
 
@@ -13,7 +20,7 @@ addButton.addEventListener("click", () => {
     newTaskInput.classList.add("taskItem");
 
     const newTaskLabel = document.createElement("label");
-    newTaskLabel.innerText = newText.value;
+    newTaskLabel.innerText = onlyText;
     newTaskLabel.classList.add("taskItemLabel");
 
     newTaskP.appendChild(newTaskInput);
@@ -30,9 +37,11 @@ deleteButton.addEventListener("click", () => {
     'input[type="checkbox"]:checked'
   );
 
-  inputToRemove.forEach((element) => {
-    const pToRemove = element.closest("p");
-    const list = document.querySelector(".taskListForm");
-    list.removeChild(pToRemove);
-  });
+  if (inputToRemove.length) {
+    inputToRemove.forEach((element) => {
+      const pToRemove = element.closest("p");
+      const list = document.querySelector(".taskListForm");
+      list.removeChild(pToRemove);
+    });
+  }
 });

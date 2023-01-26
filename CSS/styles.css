@@ -41,7 +41,17 @@ main {
   width: 100%;
   margin: 0 1%;
   background-color: transparent;
-  border: solid 1px black;
+  border: none;
+}
+.taskInput:hover,
+.taskInput:focus {
+  outline: none;
+  border: none;
+}
+.taskInput:hover::placeholder,
+.taskInput:focus::placeholder {
+  color: transparent;
+  border: none;
 }
 .addTaskButton {
   height: 80%;
