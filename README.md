@@ -4,7 +4,7 @@
 
 ## Desarrollo
 
-Para clonar el repositorio debes ingresar a la pestaña "Code" y copiar la url del repositorio. Una vez en el terminal de VScode, escribir el comando <git clone {url}>. Para acceder a la rama "develop" ejecutar el comando <git checkout develop>
+Para clonar el repositorio debes ingresar a la pestaña "Code" y copiar la url del repositorio. Una vez en el terminal de VScode, escribir el comando <git clone {url}>. Para acceder a la rama "develop" ejecutar el comando <git checkout develop>.
 
 ## Dificultades
 
