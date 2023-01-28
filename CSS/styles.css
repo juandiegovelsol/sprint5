@@ -1,13 +1,20 @@
 * {
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  font-weight: 400;
   box-sizing: border-box;
+}
+.inputWrapper,
+.taskListWrapper {
+  box-shadow: 0px 0px 25px 5px rgba(180, 180, 180, 0.5);
 }
 main,
 .inputWrapper,
 .inputField,
+.inputForm,
 .taskListWrapper,
-.taskListItem {
+.taskListForm {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,15 +38,32 @@ main {
   padding: 0 10px;
   background-color: rgb(241, 241, 241);
 }
-.taskInput {
-  height: 50%;
-  width: 85%;
-  background-color: transparent;
-  border: solid 1px black;
-}
-.AddTaskButton {
+.inputForm {
   height: 80%;
-  width: 15%;
+  width: 82%;
+}
+.taskInput {
+  height: 100%;
+  width: 100%;
+  margin: 0 1%;
+  background-color: transparent;
+  border: none;
+}
+.taskInput:hover,
+.taskInput:focus {
+  outline: none;
+  border: none;
+}
+.taskInput:hover::placeholder,
+.taskInput:focus::placeholder {
+  color: transparent;
+  border: none;
+}
+.addTaskButton {
+  height: 80%;
+  width: 12%;
+  min-width: 50px;
+  margin: 0 1%;
   background-color: #e95678;
   color: white;
   border: none;
@@ -54,19 +78,87 @@ main {
   padding: 20px;
   background-color: white;
 }
+.taskListForm {
+  flex-direction: column;
+  width: 100%;
+}
 .taskListItem {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 50px;
   width: 90%;
   border-bottom: solid 1px rgb(193, 193, 193);
 }
-.listCheckbox {
-  margin: 20px 5px;
+span.taskListItem.selected {
+  text-decoration: line-through;
+}
+.taskItemLabel {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  width: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  color: #00646e;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.taskItemLabel input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  display: flex;
+  height: 25px;
+  width: 25px;
+  margin-right: 7px;
+  border: solid 3px #24b0bc;
+  border-radius: 5px;
+}
+.taskItemLabel input:checked ~ .checkmark {
+  border: none;
+}
+.taskItemLabel:has(input:checked) {
+  color: #caf0f3;
+  text-decoration: 2px line-through #24b0bc;
+}
+.checkmark:after {
+  content: "";
+  display: none;
+}
+
+.taskItemLabel input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.taskItemLabel .checkmark:after {
+  margin: 4px 0px 0px 9px;
+  width: 5px;
+  height: 10px;
+  border: solid 2px #24b0bc;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.taskListPlaceholder {
+  display: block;
+  color: #24b0bc;
+}
+.taskListPlaceholder.hidden {
+  display: hidden;
 }
 .deleteButton {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 180px;
   margin: 30px;
   background-color: #24b0bc;
-  border-radius: 8px;
+  border-radius: 10px;
   color: white;
   border: none;
 }

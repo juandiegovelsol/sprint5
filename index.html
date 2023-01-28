@@ -5,27 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/styles.css" />
-    <title>Document</title>
+    <title>Task list</title>
   </head>
   <body>
     <main>
       <section class="inputWrapper">
         <article class="inputField">
-          <input type="text" class="taskInput" />
-          <button class="AddTaskButton">Add</button>
+          <form class="inputForm">
+            <input
+              type="text"
+              class="taskInput"
+              placeholder="Type here new task to add"
+              autofocus
+            />
+          </form>
+          <button class="addTaskButton">Add</button>
         </article>
       </section>
       <section class="taskListWrapper">
-        <article class="taskListItem">
-          <input type="checkbox" class="listCheckbox" />
-          <label for="listCheckbox">Task 1</label>
-        </article>
-        <article class="taskListItem">
-          <input type="checkbox" class="listCheckbox" />
-          <label for="listCheckbox">Task 1</label>
-        </article>
-        <button class="deleteButton">Delete all done</button>
+        <form class="taskListForm"></form>
+        <span class="taskListPlaceholder">No task in list yet, add one!</span>
       </section>
     </main>
   </body>
+  <script src="JS/app.js"></script>
 </html>
